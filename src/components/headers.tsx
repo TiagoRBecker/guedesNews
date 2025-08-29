@@ -2,15 +2,15 @@
 import { ReactTyped } from "react-typed";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
 import { useEffect } from "react";
 
 const Headers = () => {
-  useEffect(()=>{
+  useEffect(() => {
     // ..
-AOS.init();
-  },[])
+    AOS.init();
+  }, []);
   const path = usePathname();
 
   const MovieCurrentPath = (path: string) => {
@@ -50,26 +50,34 @@ AOS.init();
             {/* Se quiser, conteúdo central do header */}
             <div className="relative z-10 flex flex-col gap-3 items-start justify-center w-full container mx-auto h-full text-center text-white">
               <div className="flex flex-col items-start gap-4">
-                <div className="text-5xl w-[569px] h-[90px] font-bold">
-                <ReactTyped
-                  strings={[
-                    "Seu direito protegido, sua confiança garantida",
-                    "Seu direito protegido, sua confiança garantida",
-                    "Seu direito protegido, sua confiança garantida",
-                  ]}
-                  typeSpeed={30}
-                  backSpeed={60}
-                  loop
-                />
-              </div>
+                <div className="text-4xl w-[569px] h-[90px] font-bold">
+                  <ReactTyped
+                    strings={[
+                      "Guedes Bampi Advogados Associados",
+                      "Seu direito protegido, sua confiança garantida",
+                    ]}
+                    typeSpeed={60}
+                    backSpeed={60}
+                    backDelay={1500}
+                    loop
+                  />
+                </div>
               </div>
 
-              <p  data-aos="fade-right" data-aos-delay="400" className="w-[569px] text-left text-base text-[#F8F8F8] mt-10">
-                Estamos à frente da excelência jurídica, enfrentando casos
-                difíceis com coragem e estratégia, buscando melhores resultados.
+              <p
+                data-aos="fade-right"
+                data-aos-delay="400"
+                className="w-[569px] text-left text-base text-[#F8F8F8] mt-10"
+              >
+                Construímos confiança no direito, enfrentando desafios com
+                coragem e estratégia, para alcançar os melhores resultados.
               </p>
 
-              <button data-aos="fade-right" data-aos-delay="400" className="w-[338px] h-[58px] bg-[#3782FF] rounded-full flex items-center justify-center gap-4">
+              <button
+                data-aos="fade-right"
+                data-aos-delay="400"
+                className="w-[338px] h-[58px] bg-[#3782FF] rounded-full flex items-center justify-center gap-4"
+              >
                 Converse com um especialista
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -86,8 +94,16 @@ AOS.init();
                   />
                 </svg>
               </button>
-              <hr data-aos="fade-left "  data-aos-delay="400" className="border-t-[1px] border-dashed border-[#DADADA] w-full mt-[150px]" />
-              <div data-aos="fade-left"  data-aos-delay="400" className="w-full flex items-center justify-between">
+              <hr
+                data-aos="fade-left "
+                data-aos-delay="400"
+                className="border-t-[1px] border-dashed border-[#DADADA] w-full mt-[150px]"
+              />
+              <div
+                data-aos="fade-left"
+                data-aos-delay="400"
+                className="w-full flex items-center justify-between"
+              >
                 <p>Desde 2010</p>
                 <p>Porto Alegre</p>
                 <p>15 anos de jornada</p>
