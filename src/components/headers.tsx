@@ -17,7 +17,7 @@ AOS.init();
     switch (path) {
       case "/":
         return (
-          <header className="relative w-full h-[1090px] ">
+          <header className="relative w-full h-[896px] ">
             {/* Vídeo de fundo */}
             <video
               className="absolute top-0 left-0 w-full h-full object-cover"
