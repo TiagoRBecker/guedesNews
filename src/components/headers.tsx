@@ -10,7 +10,7 @@ const Headers = () => {
     switch (path) {
       case "/":
         return (
-          <header className="relative w-full h-[849px] bg-blue-400">
+          <header className="relative w-full h-[849px] ">
             {/* Vídeo de fundo */}
             <video
               className="absolute top-0 left-0 w-full h-full object-cover"
