@@ -2,15 +2,22 @@
 import { ReactTyped } from "react-typed";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+import { useEffect } from "react";
 
 const Headers = () => {
+  useEffect(()=>{
+    // ..
+AOS.init();
+  },[])
   const path = usePathname();
 
   const MovieCurrentPath = (path: string) => {
     switch (path) {
       case "/":
         return (
-          <header className="relative w-full h-[849px] ">
+          <header className="relative w-full h-[1190px] ">
             {/* Vídeo de fundo */}
             <video
               className="absolute top-0 left-0 w-full h-full object-cover"
@@ -43,26 +50,26 @@ const Headers = () => {
             {/* Se quiser, conteúdo central do header */}
             <div className="relative z-10 flex flex-col gap-3 items-start justify-center w-full container mx-auto h-full text-center text-white">
               <div className="flex flex-col items-start gap-4">
-                <div className="text-5xl w-[569px] font-bold">
+                <div className="text-5xl w-[569px] h-[90px] font-bold">
                 <ReactTyped
                   strings={[
                     "Seu direito protegido, sua confiança garantida",
-                    "Aqui pode ser um outro tipo de texto",
-                    "Aqui pode ser um outro tipo de texto e assim por diante ate  terminar",
+                    "Seu direito protegido, sua confiança garantida",
+                    "Seu direito protegido, sua confiança garantida",
                   ]}
-                  typeSpeed={40}
-                  backSpeed={50}
+                  typeSpeed={30}
+                  backSpeed={60}
                   loop
                 />
               </div>
               </div>
 
-              <p className="w-[569px] text-left text-base text-[#F8F8F8] mt-10">
+              <p  data-aos="fade-right" data-aos-delay="400" className="w-[569px] text-left text-base text-[#F8F8F8] mt-10">
                 Estamos à frente da excelência jurídica, enfrentando casos
                 difíceis com coragem e estratégia, buscando melhores resultados.
               </p>
 
-              <button className="w-[338px] h-[58px] bg-[#3782FF] rounded-full flex items-center justify-center gap-4">
+              <button data-aos="fade-right" data-aos-delay="400" className="w-[338px] h-[58px] bg-[#3782FF] rounded-full flex items-center justify-center gap-4">
                 Converse com um especialista
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -79,8 +86,8 @@ const Headers = () => {
                   />
                 </svg>
               </button>
-              <hr className="border-t-[1px] border-dashed border-[#DADADA] w-full mt-10" />
-              <div className="w-full flex items-center justify-between">
+              <hr data-aos="fade-left "  data-aos-delay="400" className="border-t-[1px] border-dashed border-[#DADADA] w-full mt-[150px]" />
+              <div data-aos="fade-left"  data-aos-delay="400" className="w-full flex items-center justify-between">
                 <p>Desde 2010</p>
                 <p>Porto Alegre</p>
                 <p>15 anos de jornada</p>
