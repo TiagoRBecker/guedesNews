@@ -32,7 +32,7 @@ const About = () => {
       <div className="container  h-full mx-auto bg-[#EBEDF0] grid grid-cols-2 mb-10 py-10 rounded-md  ">
         <div className="w-[598px] mx-auto flex flex-col justify-center gap-10 items-start">
           <Badge
-            text="Proósito"
+            text="Propósito"
             className="bg-[#F8F8F8] w-[107px] h-[32px] rounded-md border-[#DADADA] border-1"
           />
           <h2 className="text-5xl text-[#072137]">Assumimos nosso Compromisso</h2>
