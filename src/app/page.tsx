@@ -11,8 +11,8 @@ const sora = Sora({
 export default function Home() {
   return (
     <>
-      <section className="w-full bg-white h-screen  grid grid-cols-2 gap-9">
-        <div className="w-full h-full flex items-start justify-center relative">
+     <section className="w-full h-full bg-white h-screen  grid grid-cols-2 gap-9">
+        <div className="w-full  flex items-start justify-center relative">
           <div className="absolute top-30 flex items-center justify-center">
             <Badge
               text="  Sobre Nós"
@@ -40,11 +40,11 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-full h-[1300px] bg-[#072137] flex flex-col gap-10 py-[80px]">
+      <section className="w-full  bg-[#072137] flex flex-col gap-10 pb-[200px] ">
         <div className="container mx-auto flex flex-col items-center justify-center">
           <Badge
             text="Lideranças"
-            className="bg-[#F8F8F8] mt-36  border-[1px] border-[#DADADA] rounded-md w-[139px] h-[40px] text-[#1B1917]"
+            className="bg-[#F8F8F8]   border-[1px] border-[#DADADA] rounded-md w-[139px] h-[40px] text-[#1B1917]"
           />
 
           <h1
@@ -148,13 +148,14 @@ export default function Home() {
           </div>
         </div>
         <h1
-          className={`text-[110px] uppercase text-center tracking-[50px] ${sora.style} font-thin`}
+          className={`text-[110px] uppercase text-center tracking-[50px] ${sora.style} font-thin `}
         >
           Advogados
         </h1>
+        
       </section>
       <section className="w-full h-[600px] bg-white relative ">
-        <div className="container mx-auto h-full bg-[#EBEDF0] rounded-md absolute top-10 left-1/2 -translate-x-1/2 -translate-y-1/2 grid grid-cols-2">
+        <div className="container mx-auto h-full bg-[#EBEDF0] rounded-md absolute top-40 left-1/2 -translate-x-1/2 -translate-y-1/2 grid grid-cols-2">
           <div className="w-full h-full flex items-center justify-center">
             <Image
               alt="Alex"
@@ -187,10 +188,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-full h-full flex flex-col items-center gap-9   ">
+      <section className="w-full flex flex-col items-center gap-9    ">
         <Badge
           text="Resultados"
-          className="bg-[#EBEDF0] border-[1px] border-[#DADADA]  rounded-md w-[136px] h-[40px] text-[#1B1917]"
+          className="bg-[#EBEDF0] border-[1px] border-[#DADADA]   rounded-md w-[136px] h-[40px] text-[#1B1917]"
         />
         <h1 className={`text-[#1B1917] ${sora.style} text-5xl `}>
           Juntos nessa trajetória, conheça nosso apoio jurídico.
@@ -246,7 +247,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-full h-full flex flex-col items-center gap-9   ">
+      <section className="w-full  flex flex-col items-center gap-9 pt-20    ">
         <Badge
           text="Soluções únicas"
           className="bg-[#EBEDF0] border-[1px] border-[#DADADA]  rounded-md w-[136px] h-[40px] text-[#1B1917]"
@@ -258,12 +259,12 @@ export default function Home() {
           integradas e eficazes
         </h1>
         <button
-          className={`bg-[#3782FF] text-white w-[216px] h-[90px] py-4 text-base rounded-full  ${sora.className} `}
+          className={`bg-[#3782FF] text-white w-[216px] h-[50px] py-4 text-base rounded-full  ${sora.className} `}
         >
           Ver todos serviços
         </button>
 
-        <div className="container h-full mx-auto flex items-start justify-center gap-10">
+        <div className="container  mx-auto flex items-start justify-center gap-10">
           <div className="w-full grid grid-cols-4 gap-10">
             {consumer.map((services, index: number) => (
               <div
@@ -308,7 +309,7 @@ export default function Home() {
           Especialidades
         </h1>
       </section>
-      <section className="w-full h-[840px] p-4 mt-40 relative">
+      <section className="w-full h-[840px] p-4  relative  ">
         <img
           src="/bgf.svg"
           alt="Contact"
@@ -345,17 +346,20 @@ export default function Home() {
 
              
           </div>
-         <div className="w-[400px] mx-auto mt-12 relative z-10">
-    <div className="bg-black bg-opacity-40 backdrop-blur-md rounded-3xl p-8">
-      <p className="text-white text-center text-lg">
-        Aqui é a nova box com overlay e blur, destacando o conteúdo sem cobrir a imagem inteira.
-      </p>
-    </div>
-  </div>
+     
         </div>
         
       
       </section>
-    </>
+
+      </>
   );
 }
+
+/*
+ 
+      
+      
+      
+      
+*/
