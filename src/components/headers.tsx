@@ -1,16 +1,30 @@
 "use client";
-import { ReactTyped } from "react-typed";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-import { useEffect } from "react";
+
+import { useEffect, useState } from "react";
+
+import { Sora } from "next/font/google";
+
+
+const sora = Sora({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700"], // agora tem finos
+});
 
 const Headers = () => {
-  useEffect(() => {
-    // ..
-    AOS.init();
-  }, []);
+  const texts = ["Guedes Bampi Advogados", "Seu direito protegido, sua confiança garantida"];
+  
+  const [index, setIndex] = useState(0);
+
+ useEffect(() => {
+    if (index < texts.length - 1) {
+      const timer = setTimeout(() => setIndex(index + 1), 5000);
+      return () => clearTimeout(timer);
+    }
+    // Quando index == texts.length - 1, não faz mais nada → último texto fica na tela
+  }, [index]);
   const path = usePathname();
 
   const MovieCurrentPath = (path: string) => {
@@ -50,23 +64,24 @@ const Headers = () => {
             {/* Se quiser, conteúdo central do header */}
             <div className="relative z-10 flex flex-col gap-3 items-start justify-center w-full container mx-auto h-full text-center text-white">
               <div className="flex flex-col items-start gap-4">
-                <div className="text-4xl w-[569px] h-[90px] font-bold">
-                  <ReactTyped
-                    strings={[
-                      "Guedes Bampi Advogados Associados",
-                      "Seu direito protegido, sua confiança garantida",
-                    ]}
-                    typeSpeed={60}
-                    backSpeed={60}
-                    backDelay={1500}
-                    loop
-                  />
+                <div className=" w-[800px] h-[80px] font-bold">
+                  <AnimatePresence mode="wait">
+                    <motion.h1
+                      key={index}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 2 }}
+                      className={`text-white text-6xl text-left ${sora.className} font-light`}
+                    >
+                      {texts[index]}
+                    </motion.h1>
+                  </AnimatePresence>
                 </div>
               </div>
 
               <p
-                data-aos="fade-right"
-                data-aos-delay="400"
+           
                 className="w-[569px] text-left text-base text-[#F8F8F8] mt-10"
               >
                 Construímos confiança no direito, enfrentando desafios com
@@ -74,8 +89,7 @@ const Headers = () => {
               </p>
 
               <button
-                data-aos="fade-right"
-                data-aos-delay="400"
+              
                 className="w-[338px] h-[58px] bg-[#3782FF] rounded-full flex items-center justify-center gap-4"
               >
                 Converse com um especialista
@@ -95,13 +109,11 @@ const Headers = () => {
                 </svg>
               </button>
               <hr
-                data-aos="fade-left "
-                data-aos-delay="400"
+              
                 className="border-t-[1px] border-dashed border-[#DADADA] w-full mt-[150px]"
               />
               <div
-                data-aos="fade-left"
-                data-aos-delay="400"
+             
                 className="w-full flex items-center justify-between"
               >
                 <p>Desde 2010</p>

@@ -1,16 +1,25 @@
 import Image from "next/image";
 import { Sora } from "next/font/google";
+import Badge from "@/components/bagde";
+import { consumer } from "@/components/mocks";
 
-const sora = Sora({ subsets: ["latin"], weight: ["400", "600", "700"] });
+const sora = Sora({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700"], // agora tem finos
+});
 
 export default function Home() {
   return (
     <>
       <section className="w-full bg-white h-screen  grid grid-cols-2 gap-9">
         <div className="w-full h-full flex items-start justify-center relative">
-          <p className="bg-[#DADADA] text-black w-[140px] h-[45px] rounded-2xl absolute top-30 flex items-center justify-center">
-            Sobre Nós
-          </p>
+          <div className="absolute top-30 flex items-center justify-center">
+            <Badge
+              text="  Sobre Nós"
+              className="bg-[#F8F8F8] border-[1px] border-[#DADADA] rounded-md w-[115px] h-[40px] text-[#1B1917]"
+            />
+          </div>
+
           <Image alt="banner" src={"/banner2.svg"} width={877} height={732} />
         </div>
         <div className="w-full h-full flex flex-col items-center justify-center gap-4 max-w-[620px]">
@@ -33,10 +42,16 @@ export default function Home() {
       </section>
       <section className="w-full h-[1300px] bg-[#072137] flex flex-col gap-10 py-[80px]">
         <div className="container mx-auto flex flex-col items-center justify-center">
-          <button className="bg-[#F8F8F8] mt-36 rounded-md w-[140px] h-[50px] ">
-            Lideranças
-          </button>
-          <h1 className="text-white text-6xl">Excelência e confiança</h1>
+          <Badge
+            text="Lideranças"
+            className="bg-[#F8F8F8] mt-36  border-[1px] border-[#DADADA] rounded-md w-[139px] h-[40px] text-[#1B1917]"
+          />
+
+          <h1
+            className={`text-white text-6xl  text-center mt-4 font-thin  ${sora.style} w-full`}
+          >
+            Excelência e confiança
+          </h1>
         </div>
         <div className="w-[1280px] mx-auto grid grid-cols-2   p-4 h-[446px] ">
           <div className="bg-white w-[600px]  rounded-md grid grid-cols-2 p-4">
@@ -138,8 +153,8 @@ export default function Home() {
           Advogados
         </h1>
       </section>
-      <section className="w-full h-screen bg-white relative">
-        <div className="container mx-auto h-[600px] bg-[#EBEDF0] rounded-md absolute top-10 left-1/2 -translate-x-1/2 -translate-y-1/2 grid grid-cols-2">
+      <section className="w-full h-[600px] bg-white relative ">
+        <div className="container mx-auto h-full bg-[#EBEDF0] rounded-md absolute top-10 left-1/2 -translate-x-1/2 -translate-y-1/2 grid grid-cols-2">
           <div className="w-full h-full flex items-center justify-center">
             <Image
               alt="Alex"
@@ -150,10 +165,12 @@ export default function Home() {
             />
           </div>
           <div className="max-w-[537px] h-full flex flex-col   gap-6 justify-center">
-            <button className="bg-[#CECECE] rounded-md w-[318px] h-[40px] text-[#072137]">
-              Assessoria Jurídica de Confiança
-            </button>
-            <h1 className=" text-5xl text-[#072137]  ">
+            <Badge
+              text="Assessoria Jurídica de Confiança"
+              className="bg-[#EBEDF0] border-[1px] border-[#DADADA] rounded-md w-[318px] h-[40px] text-[#07213]"
+            />
+
+            <h1 className={`text-5xl text-[#072137]  ${sora.style}`}>
               Domínio e experiência para os litígios mais complexos.
             </h1>
             <p className="text-[#072137]">
@@ -169,6 +186,175 @@ export default function Home() {
             </button>
           </div>
         </div>
+      </section>
+      <section className="w-full h-full flex flex-col items-center gap-9   ">
+        <Badge
+          text="Resultados"
+          className="bg-[#EBEDF0] border-[1px] border-[#DADADA]  rounded-md w-[136px] h-[40px] text-[#1B1917]"
+        />
+        <h1 className={`text-[#1B1917] ${sora.style} text-5xl `}>
+          Juntos nessa trajetória, conheça nosso apoio jurídico.
+        </h1>
+        <p className="text[#707070] text-base">
+          Consulte nossos especialistas!
+        </p>
+        <div className="container mx-auto flex items-start justify-center gap-10">
+          <div className="flex flex-col gap-10">
+            <div className="w-[760px] h-[559px] rounded-md">
+              <img src="/e.svg" alt="Law" />
+            </div>
+            <div className="w-full  flex items-center justify-end">
+              <div className="w-[377px] h-[200px] rounded-md">
+                <button
+                  className={` bg-[#3782FF] text-white w-full h-full text-2xl rounded-md flex flex-col items-center justify-center fap-4 ${sora.style}`}
+                >
+                  <span
+                    className={`w-[210px] flex items-center justify-center text-left  h-[53px]  tex-white ${sora.style} font-light`}
+                  >
+                    Conheça nosso escritório
+                  </span>
+                  <span
+                    className={`w-[210px] flex items-center  text-left gap-4  h-[53px]  tex-white ${sora.style} font-light`}
+                  >
+                    Ver todos
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="size-4 mt-2"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col gap-10">
+            <div className="w-[560px] h-[340px] rounded-md">
+              <img src="/d.svg" alt="Law" />
+            </div>
+            <div className="w-[763px] h-[332px] rounded-md">
+              <img src="/c.svg" alt="Law" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="w-full h-full flex flex-col items-center gap-9   ">
+        <Badge
+          text="Soluções únicas"
+          className="bg-[#EBEDF0] border-[1px] border-[#DADADA]  rounded-md w-[136px] h-[40px] text-[#1B1917]"
+        />
+        <h1
+          className={`text-[#1B1917] ${sora.className} text-5xl  max-w-[1060px] text-center`}
+        >
+          Expertise em diversas áreas do Direito, para oferecer soluções
+          integradas e eficazes
+        </h1>
+        <button
+          className={`bg-[#3782FF] text-white w-[216px] h-[90px] py-4 text-base rounded-full  ${sora.className} `}
+        >
+          Ver todos serviços
+        </button>
+
+        <div className="container h-full mx-auto flex items-start justify-center gap-10">
+          <div className="w-full grid grid-cols-4 gap-10">
+            {consumer.map((services, index: number) => (
+              <div
+                className="bg-[#F8F8F8] flex flex-col justify-around w-[305px] h-[382px] rounded-md p-4 group"
+                key={index}
+              >
+                <div className="w-16 h-16 bg-black flex items-center justify-center rounded-full group-hover:bg-blue-600 transition-colors duration-100">
+                  <img
+                    src={services.image}
+                    alt={services.title}
+                    className="w-10 h-10 "
+                  />
+                </div>
+
+                <h2 className={`${sora.style} text-xl`}>{services.title}</h2>
+                <p className="text-[#707070]">{services.text}</p>
+                <hr className="h-[1px] bg-gray-300 border-0" />
+                <button className="mt-4 text-[#1B1917] text-left text-xl flex items-center gap-2 font-bold">
+                  Saiba mais{" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="size-4"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                    />
+                  </svg>
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+        <h1
+          className={`text-[200px] ${sora.className} uppercase text-[#EAE9E7] font-thin `}
+        >
+          Especialidades
+        </h1>
+      </section>
+      <section className="w-full h-[840px] p-4 mt-40 relative">
+        <img
+          src="/bgf.svg"
+          alt="Contact"
+          className="w-full h-full rounded-3xl object-cover "
+        />
+        <div className="w-[900px] absolute top-0 left-1/2 -translate-x-1/2 z-50">
+          <div className="w-full flex items-center justify-center mt-40">
+            <div>
+              <h1 className={`${sora.className} text-white text-6xl w-[720px]`}>
+                Nos diga, como podemos ajudar?
+              </h1>
+            </div>
+            <div>
+              <button
+                className={`bg-[#3782FF] text-white w-[262px] h-[58px]  text-base rounded-full  ${sora.className}  flex items-center justify-center gap-4`}
+              >
+                Entrar em contato
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="size-4"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                  />
+                </svg>
+              </button>
+            </div>
+
+             
+          </div>
+         <div className="w-[400px] mx-auto mt-12 relative z-10">
+    <div className="bg-black bg-opacity-40 backdrop-blur-md rounded-3xl p-8">
+      <p className="text-white text-center text-lg">
+        Aqui é a nova box com overlay e blur, destacando o conteúdo sem cobrir a imagem inteira.
+      </p>
+    </div>
+  </div>
+        </div>
+        
+      
       </section>
     </>
   );
