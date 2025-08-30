@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import { Sora } from "next/font/google";
+import Link from "next/link";
 
 
 const sora = Sora({
@@ -20,7 +21,7 @@ const Headers = () => {
 
  useEffect(() => {
     if (index < texts.length - 1) {
-      const timer = setTimeout(() => setIndex(index + 1), 5000);
+      const timer = setTimeout(() => setIndex(index + 1), 2000);
       return () => clearTimeout(timer);
     }
     // Quando index == texts.length - 1, não faz mais nada → último texto fica na tela
@@ -52,8 +53,13 @@ const Headers = () => {
 
               {/* Menu */}
               <ul className="flex-1 flex justify-end items-center gap-5 text-white">
-                <li>Inicio</li>
-                <li>Sobre</li>
+                <Link href={"/"}>
+                Inicio
+                </Link>
+                <Link href={"/about"}>
+                Sobre
+                </Link>
+               
                 <li>Serviços</li>
                 <li className="bg-[#3782FF] w-[190px] h-[52px] rounded-full text-white flex items-center justify-center">
                   Entre em contato
@@ -71,7 +77,7 @@ const Headers = () => {
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
-                      transition={{ duration: 2 }}
+                      transition={{ duration: 1}}
                       className={`text-white text-6xl text-left ${sora.className} font-light`}
                     >
                       {texts[index]}
@@ -125,18 +131,51 @@ const Headers = () => {
         );
       case "/about":
         return (
-          <header className="w-full flex flex-col h-[849px] bg-blue-500 ">
-            <nav className="container mx-auto flex items-center">
-              <div className="w-[20%]">
+         <header className=" w-full h-[623px]  bg-[url('/about.svg')] bg-cover bg-center ">
+          
+        
+
+      
+
+            {/* Conteúdo do header */}
+            <nav className="relative z-10 container mx-auto flex items-center justify-between py-6">
+              {/* Logo */}
+              <div className="w-1/5">
                 <Image alt="Logo" src={"/Logo.svg"} width={250} height={100} />
               </div>
-              <ul className=" flex-1 flex items-center gap-5">
-                <li>Inicio</li>
-                <li>Sobre</li>
+
+              {/* Menu */}
+              <ul className="flex-1 flex justify-end items-center gap-5 text-white">
+                <Link href={"/"}>
+                Inicio
+                </Link>
+                <Link href={"/about"}>
+                Sobre
+                </Link>
+               
                 <li>Serviços</li>
-                <li>Entre em contato</li>
+                <li className="bg-[#3782FF] w-[190px] h-[52px] rounded-full text-white flex items-center justify-center">
+                  Entre em contato
+                </li>
               </ul>
             </nav>
+
+    
+   
+                <div className=" container mt-30 mx-auto">
+                <div className="flex flex-col gap-3 w-[567px] h-[205px]">
+<h1 className={`text-6xl text-white ${sora.className} font-light `}>Segurança </h1>
+<h1 className={`text-6xl text-white ${sora.className} font-light `}>jurídica para você </h1>
+<h1 className={`text-6xl text-white ${sora.className} font-light `}>seguir em frente</h1>
+                </div>
+                  
+                 </div>
+       
+
+          
+              
+             
+        
           </header>
         );
       case "/services":
