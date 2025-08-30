@@ -75,3 +75,24 @@ export const socials =[
   },
  
 ];
+export const menu =[
+  {
+    title: "Início",
+    link: "/",
+  },
+  {
+     title: "Sobre",
+    link: "/about",
+  },
+  {
+    title: "Advogados",
+    link: "/lawyers",
+  },
+  {
+    title: "Serviços",
+    link: "/services",
+  },
+ 
+ 
+];
+
