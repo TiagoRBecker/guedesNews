@@ -48,3 +48,30 @@ export const consumer =[
     link: "/servicos/golpes",
   },
 ];
+export const socials =[
+  {
+    title: "Facebook",
+  
+    image: "/icons/face.svg",
+    link: "/servicos/consumidor",
+  },
+  {
+    title: "Yotuube",
+
+    image: "/icons/yt.svg",
+    link: "/servicos/trabalhista",
+  },
+  {
+    title: "Twitter",
+ 
+       image: "/icons/twitter.svg",
+    link: "/servicos/acordos",
+  },
+  {
+    title: "Linkedin",
+   
+ image: "/icons/lk.svg",
+    link: "/servicos/contratual",
+  },
+ 
+];
