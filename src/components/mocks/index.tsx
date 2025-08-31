@@ -196,10 +196,7 @@ export const menu = [
     title: "Sobre",
     link: "/about",
   },
-  {
-    title: "Advogados",
-    link: "/lawyers",
-  },
+ 
   {
     title: "Serviços",
     link: "/services",
