@@ -1,6 +1,7 @@
 import { Sora } from "next/font/google";
 import { socials } from "./mocks";
 import Image from "next/image";
+import { WhatsAppButton } from "./wppButton";
 const sora = Sora({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700"], // agora tem finos
@@ -9,6 +10,10 @@ const sora = Sora({
 const Footer = () => {
   return (
     <footer className="w-full  p-4 py-10 bg-[url(/bgf.svg)] bg-center bg-no-repeat bg-cover rounded-md relative">
+       <WhatsAppButton
+        phoneNumber="5511999999999"
+        message="Olá! Vim através do seu site e gostaria de mais informações."
+      />
       <div className="w-[900px] mx-auto ">
         <div className="w-full flex items-center justify-center mt-40">
           <div>

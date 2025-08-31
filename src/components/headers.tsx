@@ -29,6 +29,14 @@ const Headers = () => {
     }
   }, [index]);
   const path = usePathname();
+  const logo = (
+    <div className="w-1/5">
+      <Link href={"/"}>
+        <Image alt="Logo" src={"/Logo.svg"} width={250} height={100} />
+      </Link>
+    </div>
+  );
+
   const links = (
     <ul className="flex-1 flex justify-end items-center gap-5 text-white">
       {menu.map((links, index) => (
@@ -64,9 +72,7 @@ const Headers = () => {
             {/* Conteúdo do header */}
             <nav className="relative z-10 container mx-auto flex items-center justify-between py-6">
               {/* Logo */}
-              <div className="w-1/5">
-                <Image alt="Logo" src={"/Logo.svg"} width={250} height={100} />
-              </div>
+            {logo}
 
               {/* Menu */}
               {links}
@@ -128,9 +134,7 @@ const Headers = () => {
             {/* Conteúdo do header */}
             <nav className="relative z-10 container mx-auto flex items-center justify-between py-6">
               {/* Logo */}
-              <div className="w-1/5">
-                <Image alt="Logo" src={"/Logo.svg"} width={250} height={100} />
-              </div>
+                {logo}
 
               {/* Menu */}
               {links}
@@ -163,9 +167,7 @@ const Headers = () => {
             {/* Conteúdo do header */}
             <nav className="relative z-10 container mx-auto flex items-center justify-between py-6">
               {/* Logo */}
-              <div className="w-1/5">
-                <Image alt="Logo" src={"/Logo.svg"} width={250} height={100} />
-              </div>
+               {logo}
 
               {/* Menu */}
               {links}
@@ -194,34 +196,43 @@ const Headers = () => {
         );
       case "/contact":
         return (
-          <header className="w-full flex flex-col h-[623px] bg-[url('/about.svg')] bg-cover bg-center">
+          <header className="relative w-full h-[701px]">
+            <video
+              className="absolute top-0 left-0 w-full h-full object-cover object-center "
+              src="/movies/contato.mp4"
+              autoPlay
+              muted
+            ></video>
+
+            {/* Overlay opcional para contraste */}
+            <div className="absolute top-0 left-0 w-full h-full bg-black/30"></div>
             <nav className="relative z-10 container mx-auto flex items-center justify-between py-6">
               {/* Logo */}
-              <div className="w-1/5">
-                <Image alt="Logo" src={"/Logo.svg"} width={250} height={100} />
-              </div>
+               {logo}
 
               {/* Menu */}
               {links}
             </nav>
-            <div className="container mx-auto grid grid-cols-2 mt-36 gap-6">
-              <div className="w-full flex flex-col ">
-                <h1 className={`text-6xl text-white  font-light `}>
-                  Estamos prontos 
-                </h1>
-                 <h1 className={`text-6xl text-white  font-light `}>
-                 para lhe atender.
-                </h1>
-              </div>
-              <div className="w-full">
-                <p className="text-[#F8F8F8]">
-                  A Guedes Bampi Advogados nasceu com o propósito de oferecer
-                  soluções jurídicas de alto nível, pautadas pela ética, clareza
-                  e comprometimento absoluto com cada cliente. Nosso escritório
-                  é reconhecido pela atuação estratégica e pela capacidade de
-                  transformar desafios jurídicos em resultados sólidos e
-                  duradouros.
-                </p>
+            <div className="relative z-10 flex flex-col gap-3 items-start justify-center w-full container mx-auto mt-36">
+              <div className="container mx-auto grid grid-cols-2  gap-6">
+                <div className="w-full flex flex-col ">
+                  <h1 className={`text-6xl text-white  font-light `}>
+                    Estamos prontos
+                  </h1>
+                  <h1 className={`text-6xl text-white  font-light `}>
+                    para lhe atender.
+                  </h1>
+                </div>
+                <div className="w-full">
+                  <p className="text-[#F8F8F8]">
+                    A Guedes Bampi Advogados nasceu com o propósito de oferecer
+                    soluções jurídicas de alto nível, pautadas pela ética,
+                    clareza e comprometimento absoluto com cada cliente. Nosso
+                    escritório é reconhecido pela atuação estratégica e pela
+                    capacidade de transformar desafios jurídicos em resultados
+                    sólidos e duradouros.
+                  </p>
+                </div>
               </div>
             </div>
           </header>
