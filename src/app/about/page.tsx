@@ -15,7 +15,7 @@ const About = () => {
         className="bg-[#F8F8F8] w-[107px] h-[32px] rounded-md border-[#DADADA] border-1 mt-30"
       />
       <h1
-        className={`text-5xl max-w-[1100px] mx-auto ${sora.className} font-mono  text-[#1B1917]  `}
+        className={`text-5xl max-w-[1100px] mx-auto  text-[#1B1917]  `}
       >
         De valores firmes, nasce a nossa razão de ser, defendendo direitos e
         construindo legados

@@ -29,7 +29,22 @@ const Headers = () => {
     }
   }, [index]);
   const path = usePathname();
+  const links = (
+    <ul className="flex-1 flex justify-end items-center gap-5 text-white">
+      {menu.map((links, index) => (
+        <Link key={index} href={links.link}>
+          {links.title}
+        </Link>
+      ))}
 
+      <Link
+        href={"/contact"}
+        className="bg-[#3782FF] w-[190px] h-[52px] rounded-full text-white flex items-center justify-center"
+      >
+        Entre em contato
+      </Link>
+    </ul>
+  );
   const MovieCurrentPath = (path: string) => {
     switch (path) {
       case "/":
@@ -54,15 +69,7 @@ const Headers = () => {
               </div>
 
               {/* Menu */}
-              <ul className="flex-1 flex justify-end items-center gap-5 text-white">
-                {menu.map((links, index) => (
-                  <Link  key={index} href={links.link}>{links.title}</Link>
-                ))}
-
-                <li className="bg-[#3782FF] w-[190px] h-[52px] rounded-full text-white flex items-center justify-center">
-                  Entre em contato
-                </li>
-              </ul>
+              {links}
             </nav>
 
             {/* Se quiser, conteúdo central do header */}
@@ -119,22 +126,14 @@ const Headers = () => {
         return (
           <header className=" w-full h-[623px]  bg-[url('/about.svg')] bg-cover bg-center ">
             {/* Conteúdo do header */}
-           <nav className="relative z-10 container mx-auto flex items-center justify-between py-6">
+            <nav className="relative z-10 container mx-auto flex items-center justify-between py-6">
               {/* Logo */}
               <div className="w-1/5">
                 <Image alt="Logo" src={"/Logo.svg"} width={250} height={100} />
               </div>
 
               {/* Menu */}
-              <ul className="flex-1 flex justify-end items-center gap-5 text-white">
-                {menu.map((links, index) => (
-                  <Link  key={index} href={links.link}>{links.title}</Link>
-                ))}
-
-                <li className="bg-[#3782FF] w-[190px] h-[52px] rounded-full text-white flex items-center justify-center">
-                  Entre em contato
-                </li>
-              </ul>
+              {links}
             </nav>
 
             <div className=" container mt-30 mx-auto">
@@ -162,22 +161,14 @@ const Headers = () => {
         return (
           <header className=" w-full h-[623px]  bg-[url('/services.svg')] bg-cover bg-center ">
             {/* Conteúdo do header */}
-        <nav className="relative z-10 container mx-auto flex items-center justify-between py-6">
+            <nav className="relative z-10 container mx-auto flex items-center justify-between py-6">
               {/* Logo */}
               <div className="w-1/5">
                 <Image alt="Logo" src={"/Logo.svg"} width={250} height={100} />
               </div>
 
               {/* Menu */}
-              <ul className="flex-1 flex justify-end items-center gap-5 text-white">
-                {menu.map((links, index) => (
-                  <Link  key={index} href={links.link}>{links.title}</Link>
-                ))}
-
-                <li className="bg-[#3782FF] w-[190px] h-[52px] rounded-full text-white flex items-center justify-center">
-                  Entre em contato
-                </li>
-              </ul>
+              {links}
             </nav>
 
             <div className=" container mt-30 mx-auto">
@@ -185,17 +176,17 @@ const Headers = () => {
                 <h1
                   className={`text-6xl text-white ${sora.className} font-light `}
                 >
-                  Segurança{" "}
+                  Excelência
                 </h1>
                 <h1
                   className={`text-6xl text-white ${sora.className} font-light `}
                 >
-                  jurídica para você{" "}
+                  Jurídica que
                 </h1>
                 <h1
                   className={`text-6xl text-white ${sora.className} font-light `}
                 >
-                  seguir em frente
+                  Confiança
                 </h1>
               </div>
             </div>
@@ -203,24 +194,36 @@ const Headers = () => {
         );
       case "/contact":
         return (
-          <header className="w-full flex flex-col h-[849px] bg-blue-500">
-             <nav className="relative z-10 container mx-auto flex items-center justify-between py-6">
+          <header className="w-full flex flex-col h-[623px] bg-[url('/about.svg')] bg-cover bg-center">
+            <nav className="relative z-10 container mx-auto flex items-center justify-between py-6">
               {/* Logo */}
               <div className="w-1/5">
                 <Image alt="Logo" src={"/Logo.svg"} width={250} height={100} />
               </div>
 
               {/* Menu */}
-              <ul className="flex-1 flex justify-end items-center gap-5 text-white">
-                {menu.map((links, index) => (
-                  <Link key={index} href={links.link}>{links.title}</Link>
-                ))}
-
-                <li className="bg-[#3782FF] w-[190px] h-[52px] rounded-full text-white flex items-center justify-center">
-                  Entre em contato
-                </li>
-              </ul>
+              {links}
             </nav>
+            <div className="container mx-auto grid grid-cols-2 mt-36 gap-6">
+              <div className="w-full flex flex-col ">
+                <h1 className={`text-6xl text-white  font-light `}>
+                  Estamos prontos 
+                </h1>
+                 <h1 className={`text-6xl text-white  font-light `}>
+                 para lhe atender.
+                </h1>
+              </div>
+              <div className="w-full">
+                <p className="text-[#F8F8F8]">
+                  A Guedes Bampi Advogados nasceu com o propósito de oferecer
+                  soluções jurídicas de alto nível, pautadas pela ética, clareza
+                  e comprometimento absoluto com cada cliente. Nosso escritório
+                  é reconhecido pela atuação estratégica e pela capacidade de
+                  transformar desafios jurídicos em resultados sólidos e
+                  duradouros.
+                </p>
+              </div>
+            </div>
           </header>
         );
     }
