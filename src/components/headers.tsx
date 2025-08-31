@@ -177,21 +177,21 @@ const Headers = () => {
             </nav>
 
             <div className=" container mt-30 mx-auto absolute flex items-center justify-center z-40 ">
-              <div className="flex flex-col gap-3 w-[567px] h-[205px]">
+              <div className="flex flex-col gap-3 w-[600px] h-[205px]">
                 <h1
                   className={`text-6xl text-white font-light `}
                 >
-                  Excelência
+                 Excelência 
                 </h1>
                 <h1
                   className={`text-6xl text-white font-light `}
                 >
-                  Jurídica que
+                 Jurídica que Inspira
                 </h1>
                 <h1
                   className={`text-6xl text-white font-light `}
                 >
-                  Confiança
+                Confiança
                 </h1>
               </div>
             </div>
