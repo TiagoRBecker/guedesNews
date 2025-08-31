@@ -3,7 +3,7 @@ import { consumerAll } from "@/components/mocks";
 
 const Contatc = () => {
   return (
-    <section className="w-full h-screen">
+    <section className="w-full h-full py-10">
       <div className="container mx-auto flex items-start gap-10 mt-36">
         <div className="w-[840px] h-full flex flex-col gap-10 ">
           <Badge
