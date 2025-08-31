@@ -3,6 +3,7 @@ import { Sora } from "next/font/google";
 import Badge from "@/components/bagde";
 import { consumer } from "@/components/mocks";
 import Footer from "@/components/footer";
+import Link from "next/link";
 
 
 const sora = Sora({
@@ -283,23 +284,25 @@ export default function Home() {
                 <h2 className={`${sora.style} text-xl`}>{services.title}</h2>
                 <p className="text-[#707070]">{services.text}</p>
                 <hr className="h-[1px] bg-gray-300 border-0" />
-                <button className="mt-4 text-[#1B1917] text-left text-xl flex items-center gap-2 font-bold">
-                  Saiba mais{" "}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="size-4"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="m8.25 4.5 7.5 7.5-7.5 7.5"
-                    />
-                  </svg>
-                </button>
+              <Link  href={`/services/${services.id}`} >
+                      <button className="mt-4 text-[#1B1917] text-left text-xl flex items-center gap-2 font-bold cursor-pointer">
+                        Saiba mais{" "}
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth={1.5}
+                          stroke="currentColor"
+                          className="size-4"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                          />
+                        </svg>
+                      </button>
+                      </Link>
               </div>
             ))}
           </div>

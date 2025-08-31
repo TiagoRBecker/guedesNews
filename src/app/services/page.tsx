@@ -1,6 +1,7 @@
 import Badge from "@/components/bagde";
 import { consumerAll, services } from "@/components/mocks";
 import Image from "next/image";
+import Link from "next/link";
 
 const Services = () => {
   return (
@@ -69,7 +70,8 @@ const Services = () => {
                       <h2 className={` text-xl`}>{services.title}</h2>
                       <p className="text-[#707070]">{services.text}</p>
                       <hr className="h-[1px] bg-gray-300 border-0" />
-                      <button className="mt-4 text-[#1B1917] text-left text-xl flex items-center gap-2 font-bold">
+                      <Link  href={`/services/${services.id}`} >
+                      <button className="mt-4 text-[#1B1917] text-left text-xl flex items-center gap-2 font-bold cursor-pointer">
                         Saiba mais{" "}
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -86,6 +88,7 @@ const Services = () => {
                           />
                         </svg>
                       </button>
+                      </Link>
                     </div>
                   ))}
                 </div>

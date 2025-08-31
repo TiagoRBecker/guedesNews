@@ -53,9 +53,9 @@ const Headers = () => {
       </Link>
     </ul>
   );
-  const MovieCurrentPath = (path: string) => {
-    switch (path) {
-      case "/":
+  const MovieCurrentPath = () => {
+    switch (true) {
+      case path === "/":
         return (
           <header className="relative w-full h-[896px] ">
             {/* Vídeo de fundo */}
@@ -128,7 +128,7 @@ const Headers = () => {
             </div>
           </header>
         );
-      case "/about":
+      case path ==="/about":
         return (
           <header className=" w-full h-[623px]  bg-[url('/about.svg')] bg-cover bg-center ">
             {/* Conteúdo do header */}
@@ -161,9 +161,12 @@ const Headers = () => {
             </div>
           </header>
         );
-      case "/services":
+      case  path.startsWith("/services"):
         return (
-          <header className=" w-full h-[623px]  bg-[url('/services.svg')] bg-cover bg-center ">
+          <header className=" w-full h-[623px]  bg-[url('/services.svg')] bg-cover bg-center relative ">
+
+
+              <div className="absolute top-0 left-0 w-full h-full bg-black/30"></div>
             {/* Conteúdo do header */}
             <nav className="relative z-10 container mx-auto flex items-center justify-between py-6">
               {/* Logo */}
@@ -173,20 +176,20 @@ const Headers = () => {
               {links}
             </nav>
 
-            <div className=" container mt-30 mx-auto">
+            <div className=" container mt-30 mx-auto absolute flex items-center justify-center z-40 ">
               <div className="flex flex-col gap-3 w-[567px] h-[205px]">
                 <h1
-                  className={`text-6xl text-white ${sora.className} font-light `}
+                  className={`text-6xl text-white font-light `}
                 >
                   Excelência
                 </h1>
                 <h1
-                  className={`text-6xl text-white ${sora.className} font-light `}
+                  className={`text-6xl text-white font-light `}
                 >
                   Jurídica que
                 </h1>
                 <h1
-                  className={`text-6xl text-white ${sora.className} font-light `}
+                  className={`text-6xl text-white font-light `}
                 >
                   Confiança
                 </h1>
@@ -194,7 +197,7 @@ const Headers = () => {
             </div>
           </header>
         );
-      case "/contact":
+      case path ==="/contact":
         return (
           <header className="relative w-full h-[701px]">
             <video
@@ -239,7 +242,7 @@ const Headers = () => {
         );
     }
   };
-  return <>{MovieCurrentPath(path)}</>;
+  return <>{MovieCurrentPath()}</>;
 };
 
 export default Headers;
