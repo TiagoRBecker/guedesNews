@@ -57,15 +57,19 @@ export default function Home() {
           </h1>
         </div>
         <div className="w-[1280px] mx-auto grid grid-cols-2   p-4 h-[446px] ">
-          <div className="bg-white w-[600px]  rounded-md grid grid-cols-2 p-4">
-            <div className="w-full">
+           <div className="bg-white w-[600px]   h-[466px] rounded-md grid grid-cols-2 gap-4 p-4">
+            <div className="w-full h-full relative flex items-center justify-center">
               <Image
                 alt="Alex"
                 src={"/al.png"}
-                width={250}
-                height={300}
-                className="rounded-md"
+                width={700}
+              height={500}
+             className="rounded-md w-full h-full object-cover"
               />
+               <Badge
+            text="Guiding Partners"
+            className="bg-[#F8F8F8]  absolute bottom-4 border-[1px] border-[#DADADA] rounded-md w-[200px] h-[40px] text-[#1B1917]  "
+          />
             </div>
             <div className="w-full  bg-[#F8F8F8] rounded-md flex flex-col justify-between gap-4 p-4">
               <div className="w-full flex flex-col gap-4">
@@ -78,40 +82,22 @@ export default function Home() {
                   personalizado de excelência
                 </p>
               </div>
-              <div className=" flex items-center gap-10">
-                <Image
-                  alt="Alex"
-                  src={"/l.svg"}
-                  width={30}
-                  height={30}
-                  className="rounded-md"
-                />
-                <Image
-                  alt="Alex"
-                  src={"/x.svg"}
-                  width={30}
-                  height={30}
-                  className="rounded-md"
-                />
-                <Image
-                  alt="Alex"
-                  src={"/i.svg"}
-                  width={30}
-                  height={30}
-                  className="rounded-md"
-                />
-              </div>
+            
             </div>
           </div>
-          <div className="bg-white w-[600px]   h-full rounded-md grid grid-cols-2 gap-4 p-4">
-            <div className="w-full h-full">
+          <div className="bg-white w-[600px]   h-[466px] rounded-md grid grid-cols-2 gap-4 p-4">
+            <div className="w-full h-full relative flex items-center justify-center">
               <Image
                 alt="Alex"
                 src={"/de.png"}
-                width={250}
-                height={300}
-                className="rounded-md"
+                width={700}
+              height={500}
+             className="rounded-md w-full h-full object-cover"
               />
+              <Badge
+            text="Guiding Partners"
+            className="bg-[#F8F8F8]  absolute bottom-4 border-[1px] border-[#DADADA] rounded-md w-[200px] h-[40px] text-[#1B1917]  "
+          />
             </div>
             <div className="w-full h-full bg-[#F8F8F8] rounded-md flex flex-col justify-between gap-4 p-4">
               <div className="w-full flex flex-col gap-4">
@@ -124,29 +110,7 @@ export default function Home() {
                   clientes.
                 </p>
               </div>
-              <div className=" flex items-center gap-10">
-                <Image
-                  alt="Alex"
-                  src={"/l.svg"}
-                  width={30}
-                  height={30}
-                  className="rounded-md"
-                />
-                <Image
-                  alt="Alex"
-                  src={"/x.svg"}
-                  width={30}
-                  height={30}
-                  className="rounded-md"
-                />
-                <Image
-                  alt="Alex"
-                  src={"/i.svg"}
-                  width={30}
-                  height={30}
-                  className="rounded-md"
-                />
-              </div>
+          
             </div>
           </div>
         </div>

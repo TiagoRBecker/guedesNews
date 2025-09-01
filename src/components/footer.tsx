@@ -10,7 +10,7 @@ const sora = Sora({
 const Footer = () => {
   return (
     <footer className="w-full  p-4 py-10 bg-[url(/bgf.svg)] bg-center bg-no-repeat bg-cover rounded-md relative">
-       <WhatsAppButton
+      <WhatsAppButton
         phoneNumber="5511999999999"
         message="Olá! Vim através do seu site e gostaria de mais informações."
       />
@@ -59,14 +59,12 @@ const Footer = () => {
               <li>Contato</li>
             </ul>
           </div>
-          <div className="w-full h-full flex flex-col items-start justify-self-auto text-white ">
+          <div className="w-full h-full flex flex-col items-start justify-self-auto text-white  gap-2">
             <h2 className="text-[#707070] uppercase text-xl mb-5">Contato</h2>
-            <p>Avenida Borges de Medeiros</p>
-            <p>Porto Alegre, RS, Brazil</p>
-            <p className="flex items-center gap-4 mt-6">
-              <img src={"/phone.svg"} alt="Phone" className="w-6 h-6" />
-              +55 51 9999-9999
-            </p>
+
+            <p> Rua General Cãmara 432</p>
+            <p>Sala 204, Centro</p>
+            <p> Porto Alegre, RS, CEP 90010-271</p>
           </div>
           <div className="w-full h-full flex flex-col items-start justify-start">
             <h2 className="text-[#707070] uppercase text-xl mb-5">
