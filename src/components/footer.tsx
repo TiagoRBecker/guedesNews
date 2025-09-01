@@ -2,6 +2,7 @@ import { Sora } from "next/font/google";
 import { socials } from "./mocks";
 import Image from "next/image";
 import { WhatsAppButton } from "./wppButton";
+import Link from "next/link";
 const sora = Sora({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700"], // agora tem finos
@@ -22,9 +23,10 @@ const Footer = () => {
             </h1>
           </div>
           <div>
-            <button
-              className={`bg-[#3782FF] text-white w-[262px] h-[58px]  text-base rounded-full  ${sora.className}  flex items-center justify-center gap-4`}
-            >
+            <Link href={"/contact"}   className={`bg-[#3782FF] text-white w-[262px] h-[58px]  text-base rounded-full  ${sora.className}  flex items-center justify-center gap-4`}>
+            
+            
+            
               Entrar em contato
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +42,8 @@ const Footer = () => {
                   d="m8.25 4.5 7.5 7.5-7.5 7.5"
                 />
               </svg>
-            </button>
+      
+            </Link>
           </div>
         </div>
       </div>
@@ -63,7 +66,7 @@ const Footer = () => {
             <h2 className="text-[#707070] uppercase text-xl mb-5">Contato</h2>
 
             <p> Rua General Cãmara 432</p>
-            <p>Sala 204, Centro</p>
+            <p>Sala 204, Centro Histórico</p>
             <p> Porto Alegre, RS, CEP 90010-271</p>
           </div>
           <div className="w-full h-full flex flex-col items-start justify-start">

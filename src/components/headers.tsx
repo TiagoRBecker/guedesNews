@@ -102,7 +102,7 @@ const Headers = () => {
                 coragem e estratégia, para alcançar os melhores resultados.
               </p>
 
-              <button className="w-[338px] h-[58px] bg-[#3782FF] rounded-full flex items-center justify-center gap-4">
+               <Link href={"/contact"} className="w-[338px] h-[58px] bg-[#3782FF] rounded-full flex items-center justify-center gap-4">
                 Converse com um especialista
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -118,7 +118,7 @@ const Headers = () => {
                     d="m8.25 4.5 7.5 7.5-7.5 7.5"
                   />
                 </svg>
-              </button>
+              </Link>
               <hr className="border-t-[1px] border-dashed border-[#DADADA] w-full mt-[150px]" />
               <div className="w-full flex items-center justify-between">
                 <p>Desde 2010</p>

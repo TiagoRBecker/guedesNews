@@ -5,7 +5,6 @@ import { consumer } from "@/components/mocks";
 import Footer from "@/components/footer";
 import Link from "next/link";
 
-
 const sora = Sora({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700"], // agora tem finos
@@ -37,9 +36,9 @@ export default function Home() {
             e representar clientes com ética, clareza e resultados concretos.
           </p>
           <div className="w-full flex  ">
-            <button className="w-[210px] h-[58px] rounded-full bg-[#3782FF] text-sm text-white">
-              Saiba mais
-            </button>
+            <Link href={"/contact"} className="w-[210px] h-[58px] rounded-full bg-[#3782FF] text-sm text-white flex items-center justify-center">  Saiba mais </Link>
+            
+            
           </div>
         </div>
       </section>
@@ -51,25 +50,25 @@ export default function Home() {
           />
 
           <h1
-            className={`text-white text-6xl  text-center mt-4 font-thin  ${sora.style} w-full`}
+            className={`text-white text-6xl  text-center mt-4 font-thin   w-full`}
           >
             Excelência e confiança
           </h1>
         </div>
         <div className="w-[1280px] mx-auto grid grid-cols-2   p-4 h-[446px] ">
-           <div className="bg-white w-[600px]   h-[466px] rounded-md grid grid-cols-2 gap-4 p-4">
+          <div className="bg-white w-[600px]   h-[466px] rounded-md grid grid-cols-2 gap-4 p-4">
             <div className="w-full h-full relative flex items-center justify-center">
               <Image
                 alt="Alex"
                 src={"/al.png"}
                 width={700}
-              height={500}
-             className="rounded-md w-full h-full object-cover"
+                height={500}
+                className="rounded-md w-full h-full object-cover"
               />
-               <Badge
-            text="Guiding Partners"
-            className="bg-[#F8F8F8]  absolute bottom-4 border-[1px] border-[#DADADA] rounded-md w-[200px] h-[40px] text-[#1B1917]  "
-          />
+              <Badge
+                text="Guiding Partners"
+                className="bg-[#F8F8F8]  absolute bottom-4 border-[1px] border-[#DADADA] rounded-md w-[200px] h-[40px] text-[#1B1917]  "
+              />
             </div>
             <div className="w-full  bg-[#F8F8F8] rounded-md flex flex-col justify-between gap-4 p-4">
               <div className="w-full flex flex-col gap-4">
@@ -82,7 +81,6 @@ export default function Home() {
                   personalizado de excelência
                 </p>
               </div>
-            
             </div>
           </div>
           <div className="bg-white w-[600px]   h-[466px] rounded-md grid grid-cols-2 gap-4 p-4">
@@ -91,13 +89,13 @@ export default function Home() {
                 alt="Alex"
                 src={"/de.png"}
                 width={700}
-              height={500}
-             className="rounded-md w-full h-full object-cover"
+                height={500}
+                className="rounded-md w-full h-full object-cover"
               />
               <Badge
-            text="Guiding Partners"
-            className="bg-[#F8F8F8]  absolute bottom-4 border-[1px] border-[#DADADA] rounded-md w-[200px] h-[40px] text-[#1B1917]  "
-          />
+                text="Guiding Partners"
+                className="bg-[#F8F8F8]  absolute bottom-4 border-[1px] border-[#DADADA] rounded-md w-[200px] h-[40px] text-[#1B1917]  "
+              />
             </div>
             <div className="w-full h-full bg-[#F8F8F8] rounded-md flex flex-col justify-between gap-4 p-4">
               <div className="w-full flex flex-col gap-4">
@@ -110,13 +108,10 @@ export default function Home() {
                   clientes.
                 </p>
               </div>
-          
             </div>
           </div>
         </div>
-        <h1
-          className={`text-[110px] uppercase text-center  ${sora.style} font-thin `}
-        >
+        <h1 className={`text-[110px] uppercase text-center   font-thin `}>
           Advogados
         </h1>
       </section>
@@ -148,9 +143,13 @@ export default function Home() {
               e na busca constante dos direitos de seus clientes, administrando
               hoje mais de 3.000 processos ativos em todo o Brasil.
             </p>
-            <button className="w-[230px] h-[58px] rounded-full bg-[#3782FF] text-white">
+            <Link
+              href={"/contact"}
+              className="w-[230px] h-[58px] rounded-full bg-[#3782FF] text-white flex items-center justify-center"
+            >
+              {" "}
               Entre em contato
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -180,6 +179,7 @@ export default function Home() {
                   >
                     Conheça nosso escritório
                   </span>
+
                   <span
                     className={`w-[210px] flex items-center  text-left gap-4  h-[53px]  tex-white ${sora.style} font-light`}
                   >
@@ -216,19 +216,18 @@ export default function Home() {
       <section className="w-full  flex flex-col items-center gap-9 pt-20    ">
         <Badge
           text="Soluções únicas"
-          className="bg-[#EBEDF0] border-[1px] border-[#DADADA]  rounded-md w-[136px] h-[40px] text-[#1B1917]"
+          className="bg-[#EBEDF0] border-[1px] border-[#DADADA]  rounded-md w-[236px] h-[40px] text-[#1B1917]"
         />
-        <h1
-          className={`text-[#1B1917] ${sora.className} text-5xl  max-w-[1060px] text-center`}
-        >
+        <h1 className={`text-[#1B1917]  text-5xl  max-w-[1060px] text-center`}>
           Expertise em diversas áreas do Direito, para oferecer soluções
           integradas e eficazes
         </h1>
-        <button
-          className={`bg-[#3782FF] text-white w-[216px] h-[50px] py-4 text-base rounded-full  ${sora.className} `}
+        <Link
+          href={"/services"}
+          className={`bg-[#3782FF] text-white w-[216px] h-[50px] py-4 text-base rounded-full flex items-center justify-center   `}
         >
           Ver todos serviços
-        </button>
+        </Link>
 
         <div className="container  mx-auto flex items-start justify-center gap-10">
           <div className="w-full grid grid-cols-4 gap-10">
@@ -248,39 +247,33 @@ export default function Home() {
                 <h2 className={`${sora.style} text-xl`}>{services.title}</h2>
                 <p className="text-[#707070]">{services.text}</p>
                 <hr className="h-[1px] bg-gray-300 border-0" />
-              <Link  href={`/services/${services.id}`} >
-                      <button className="mt-4 text-[#1B1917] text-left text-xl flex items-center gap-2 font-bold cursor-pointer">
-                        Saiba mais{" "}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          strokeWidth={1.5}
-                          stroke="currentColor"
-                          className="size-4"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="m8.25 4.5 7.5 7.5-7.5 7.5"
-                          />
-                        </svg>
-                      </button>
-                      </Link>
+                <Link href={`/services/${services.id}`}>
+                  <button className="mt-4 text-[#1B1917] text-left text-xl flex items-center gap-2 font-bold cursor-pointer">
+                    Saiba mais{" "}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="size-4"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                      />
+                    </svg>
+                  </button>
+                </Link>
               </div>
             ))}
           </div>
         </div>
-        <h1
-          className={`text-[200px] ${sora.className} uppercase text-[#EAE9E7] font-thin `}
-        >
+        <h1 className={`text-[200px]  uppercase text-[#EAE9E7] font-thin `}>
           Especialidades
         </h1>
       </section>
-  
-   
     </>
   );
 }
-
-
