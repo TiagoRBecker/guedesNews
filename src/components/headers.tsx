@@ -199,7 +199,7 @@ const Headers = () => {
         );
       case path ==="/contact":
         return (
-          <header className="relative w-full h-[701px]">
+          <header className="relative w-full h-[500px]">
             <video
               className="absolute top-0 left-0 w-full h-full object-cover object-center "
               src="/movies/contato.mp4"

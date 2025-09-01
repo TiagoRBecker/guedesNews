@@ -117,11 +117,11 @@ const Contatc = () => {
             need it most. Fill out the form, give us a call, or stop by our
             office to discuss how we can assist you.
           </p>
-          <form className="w-full flex flex-col gap-10" onSubmit={handleSubmit}>
+          <form className="w-full  flex flex-col gap-10" onSubmit={handleSubmit}>
             <input
               type="text"
               name="name"
-              className="outline-none border-1 border-[#DADADA] w-full rounded-3xl h-16 pl-6"
+              className="outline-none border-1 border-[#DADADA] w-full rounded-md h-11 pl-6"
               placeholder="Nome"
               value={values.name}
               onChange={handleChange}
@@ -132,7 +132,7 @@ const Contatc = () => {
             <input
               type="email"
               name="email"
-              className="outline-none border-1 border-[#DADADA] w-full rounded-3xl h-16 pl-6"
+              className="outline-none border-1 border-[#DADADA] w-full rounded-md  h-11 pl-6"
               placeholder="Email"
               value={values.email}
               onChange={handleChange}
@@ -143,7 +143,7 @@ const Contatc = () => {
             <input
               type="text"
               name="phone"
-              className="outline-none border-1 border-[#DADADA] w-full rounded-3xl h-16 pl-6"
+              className="outline-none border-1 border-[#DADADA] w-full rounded-md  h-11 pl-6"
               placeholder="Telefone"
               value={values.phone}
               onChange={handleChange}
@@ -153,11 +153,12 @@ const Contatc = () => {
             )}
             <select
               name="area"
-              className="outline-none border-1 border-[#DADADA] w-full rounded-3xl h-16 px-2 "
+              className="outline-none border-1 border-[#DADADA] w-full rounded-md  h-11 px-2 "
               value={values.area}
               onChange={handleChange}
+              
             >
-              <option value={""}>Em qual área podemos te ajudar</option>
+              <option  value={""}>Em qual área podemos te ajudar</option>
               {consumerAll.map((service, index) => (
                 <option key={index} value={service.title}>
                   {service.title}
@@ -169,10 +170,12 @@ const Contatc = () => {
             )}
 
             <textarea
+           
+             placeholder="Digite sua mensagem"
               name="message"
               value={values.message}
               onChange={handleChange}
-              className="w-full h-[250px] outline-none border-1 border-[#DADADA] rounded-3xl p-5"
+              className="w-full h-[150px] outline-none border-1 border-[#DADADA] rounded-md  p-5 resize-none"
             ></textarea>
             {errors.message && (
               <p className="text-red-500 text-sm mt-1 ml-4">{errors.message}</p>
@@ -180,7 +183,7 @@ const Contatc = () => {
 
             <button
               type={pending ? "button" : "submit"}
-              className="w-full h-[58px] bg-black text-white rounded-3xl"
+              className="w-full h-[58px] bg-black text-white rounded-md "
             >
               {pending ? "Aguarde enviando ..." : "Enviar Formulário"}
             </button>
