@@ -4,12 +4,11 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
     const { name, email, phone, area, message } = body;
-  console.log(process.env.EMAIL_USER)
-    console.log(process.env.EMAIL_PASS)
+
     const transporter = nodemailer.createTransport({
       host: "smtp.hostinger.com",
-      port: 587, 
-      secure: false, 
+      port: 465, 
+      secure:true,
       auth: {
         user: process.env.EMAIL_USER, 
         pass: process.env.EMAIL_PASS, 
