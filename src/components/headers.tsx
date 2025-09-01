@@ -240,6 +240,77 @@ const Headers = () => {
             </div>
           </header>
         );
+        default:
+          return   <header className="relative w-full h-[896px] ">
+            {/* Vídeo de fundo */}
+            <video
+              className="absolute top-0 left-0 w-full h-full object-cover"
+              src="/movies/home.mp4"
+              autoPlay
+              muted
+            ></video>
+
+            {/* Overlay opcional para contraste */}
+            <div className="absolute top-0 left-0 w-full h-full bg-black/30"></div>
+
+            {/* Conteúdo do header */}
+            <nav className="relative z-10 container mx-auto flex items-center justify-between py-6">
+              {/* Logo */}
+            {logo}
+
+              {/* Menu */}
+              {links}
+            </nav>
+
+            {/* Se quiser, conteúdo central do header */}
+            <div className="relative z-10 flex flex-col gap-3 items-start justify-center w-full container mx-auto h-full text-center text-white">
+              <div className="flex flex-col items-start gap-4">
+                <div className=" w-[800px] h-[80px] font-bold">
+                  <AnimatePresence mode="wait">
+                    <motion.h1
+                      key={index}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 1 }}
+                      className={`text-white text-6xl text-left ${sora.className} font-light`}
+                    >
+                      {texts[index]}
+                    </motion.h1>
+                  </AnimatePresence>
+                </div>
+              </div>
+
+              <p className="w-[569px] text-left text-base text-[#F8F8F8] mt-10">
+                Construímos confiança no direito, enfrentando desafios com
+                coragem e estratégia, para alcançar os melhores resultados.
+              </p>
+
+               <Link href={"/contact"} className="w-[338px] h-[58px] bg-[#3782FF] rounded-full flex items-center justify-center gap-4">
+                Converse com um especialista
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="size-4 text-white"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                  />
+                </svg>
+              </Link>
+              <hr className="border-t-[1px] border-dashed border-[#DADADA] w-full mt-[150px]" />
+              <div className="w-full flex items-center justify-between">
+                <p>Desde 2010</p>
+                <p>Porto Alegre</p>
+                <p>15 anos de jornada</p>
+              </div>
+            </div>
+          </header>
     }
   };
   return <>{MovieCurrentPath()}</>;

@@ -1,5 +1,5 @@
 import { Sora } from "next/font/google";
-import { socials } from "./mocks";
+import { menu, socials } from "./mocks";
 import Image from "next/image";
 import { WhatsAppButton } from "./wppButton";
 import Link from "next/link";
@@ -9,6 +9,22 @@ const sora = Sora({
 });
 
 const Footer = () => {
+   const links = (
+    <ul className="list-none text-white flex flex-col gap-6">
+      {menu.map((links, index) => (
+        <Link key={index} href={links.link}>
+          {links.title}
+        </Link>
+      ))}
+
+      <Link
+        href={"/contact"}
+        className=" text-white "
+      >
+        Entre em contato
+      </Link>
+    </ul>
+  );
   return (
     <footer className="w-full  p-4 py-10 bg-[url(/bgf.svg)] bg-center bg-no-repeat bg-cover rounded-md relative">
       <WhatsAppButton
@@ -55,12 +71,7 @@ const Footer = () => {
           </div>
           <div className="w-full h-full flex flex-col items-center justify-start">
             <h2 className="text-[#707070] uppercase text-xl mb-5">Menu</h2>
-            <ul className="list-none text-white flex flex-col gap-6">
-              <li>Ínicio</li>
-              <li>Sobre</li>
-              <li>Serviços</li>
-              <li>Contato</li>
-            </ul>
+            {links}
           </div>
           <div className="w-full h-full flex flex-col items-start justify-self-auto text-white  gap-2">
             <h2 className="text-[#707070] uppercase text-xl mb-5">Contato</h2>
@@ -90,9 +101,9 @@ const Footer = () => {
         <hr className="h-[0.6px] bg-gray-300 border-0 mt-6" />
         <div className="w-full h-[90px] text-white flex items-center justify-center ">
           <ul className=" flex items-center w-full justify-around">
-            <li>Política de Privacidade</li>
+            <li><Link href={"/privacy"}>Política de Privacidade</Link></li>
             <li>Desenvolvido</li>
-            <li>Termos e condições</li>
+            <li> <Link href={"/terms"}>Termos e condições</Link></li>
           </ul>
         </div>
       </div>
