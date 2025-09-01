@@ -12,7 +12,7 @@ export function WhatsAppButton({
   className = "",
 }: WhatsAppButtonProps) {
   const formatPhoneNumber = (phone: string) => {
-    // Remove todos os caracteres não numéricos
+  
     return phone.replace(/\D/g, "")
   }
 

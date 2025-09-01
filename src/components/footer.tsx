@@ -12,8 +12,8 @@ const Footer = () => {
   return (
     <footer className="w-full  p-4 py-10 bg-[url(/bgf.svg)] bg-center bg-no-repeat bg-cover rounded-md relative">
       <WhatsAppButton
-        phoneNumber="5511999999999"
-        message="Olá! Vim através do seu site e gostaria de mais informações."
+        phoneNumber="555195391300"
+        message="Olá gostaria de falar com a equipe Juridica da Guedesbampi Advogados, Meu nome é (insira seu nome) e preciso de (insira no que podemos ajudar) !"
       />
       <div className="w-[900px] mx-auto ">
         <div className="w-full flex items-center justify-center mt-40">
@@ -90,9 +90,9 @@ const Footer = () => {
         <hr className="h-[0.6px] bg-gray-300 border-0 mt-6" />
         <div className="w-full h-[90px] text-white flex items-center justify-center ">
           <ul className=" flex items-center w-full justify-around">
-            <li>Plitica de privacidade</li>
-            <li>Desenvolido</li>
-            <li>Termos e condiçoes</li>
+            <li>Política de Privacidade</li>
+            <li>Desenvolvido</li>
+            <li>Termos e condições</li>
           </ul>
         </div>
       </div>

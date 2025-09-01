@@ -53,7 +53,7 @@ const Contatc = () => {
             </button>
           </form>
         </div>
-        <div className="w-[346px] rounded-3xl h-[401px] bg-[#F8F8F8] mx-auto  flex flex-col  pl-10 gap-8  pt-10 text-[#1A191C}">
+        <div className="w-[450px] rounded-3xl h-[401px] bg-[#F8F8F8] mx-auto  flex flex-col  pl-10 gap-8  pt-10 text-[#1A191C}">
           <h1 className="text-2xl font-normal">Fale Conosco</h1>
           <ul className="w-full flex flex-col list-none  items-start justify-center gap-4">
             <li className=" flex items-center gap-4">
@@ -66,7 +66,14 @@ const Contatc = () => {
             </li>
             <li className="flex items-center gap-2">
               <img src="/contacts/maps.svg" alt="" className="w-6 h-6" />
-              Avenida Borges de Medeiros Porto Alegre, RS, Brazil
+             <span className="pl-2">
+              <p>
+ Rua General Cãmara 432, sala 204
+              </p>
+              <p>
+                Centro Histórico / Porto Alegre
+              </p>
+             </span>
             </li>
             <li className=" flex items-center gap-4">
               <img src="/contacts/link.svg" alt="" className="w-6 h-6" />
